@@ -1,0 +1,19 @@
+class Solution {
+    public int minimumDifference(int[] nums, int k) {
+          int[] nums= {1,4,7,9};  
+        Arrays.sort(nums);
+        int n= nums.length;
+       int diff=Integer.MAX_VALUE;
+       int l =0;
+        for(int r=0; rn; r++){
+           if(r-l == k){
+            l++;
+           }
+           if(r-l+1 == k){
+           diff =  Math.min(nums[r]-nums[l], diff);}
+            
+        }
+        System.out.println(diff);
+    return diff;     
+    }
+}
